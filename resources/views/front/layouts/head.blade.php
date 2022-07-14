@@ -29,6 +29,7 @@
   <link href="{{ asset('front/assets/css/style.css') }}" rel="stylesheet">
   
   <!-- Addition File -->
+  <link href="{{ asset('front/assets/css/bootstrap.css') }}" rel="stylesheet">
   @yield('styles')
   @stack('styles')
   <!-- =======================================================

@@ -9,7 +9,9 @@
   <!-- End Header -->
 
   <!-- ======= Content ======= -->
+  <main id="main">
   @yield('content')
+  </main>
   <!-- End Content -->
 
   <!-- ======= Footer ======= -->

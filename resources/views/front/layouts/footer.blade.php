@@ -98,5 +98,6 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('front/assets/js/main.js') }}"></script>
+<script src="{{ asset('front/assets/js/bootstrap.bundle.min.js') }}"></script>
 @yield('scripts')
 @stack('scripts')

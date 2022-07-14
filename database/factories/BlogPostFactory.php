@@ -19,7 +19,7 @@ class BlogPostFactory extends Factory
         return [
             'title' => $this->faker->sentence(mt_rand(4,10)),
             'slug' => $this->faker->slug(),
-            'content' => $this->faker->paragraph(mt_rand(4, 10)),
+            'content' => $this->faker->paragraphs(6, true),
             'image_url' => 'front/assets/img/blog/blog-2.jpg',
             'user_id' => 1,
             'category_id' => rand(1,2)

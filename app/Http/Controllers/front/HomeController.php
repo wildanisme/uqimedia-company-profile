@@ -8,15 +8,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $latestBlogPosts = BlogPost::with(['category'])->latest()->limit(6)->get();
         return view('front.home.home', compact('latestBlogPosts'));
+    }
+
+    public function showPost($id)
+    {
+        $blogPost = BlogPost::with(['category'])->find($id);
+        // dd($blogPost);
+        return view('front.blog-post.detail', compact('blogPost'));
     }
 
     /**

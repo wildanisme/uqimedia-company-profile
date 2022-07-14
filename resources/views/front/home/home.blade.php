@@ -23,8 +23,7 @@
 
 </section>
 <!-- End Hero -->
-
-<main id="main">
+{{-- <main id="main"> --}}
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
 
@@ -1023,25 +1022,14 @@
           </div>
         </div>
         @endforeach
-
-        {{-- <div class="col-lg-4">
-          <div class="post-box">
-            <div class="post-img"><img src="{{ asset('front/assets/img/blog/blog-2.jpg') }}" class="img-fluid" alt=""></div>
-            <span class="post-date">Fri, August 28</span>
-            <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        <div class="col-lg-12 d-flex justify-content-center">
+          <div class="text-center btn btn-outline-primary">
+            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>View More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
         </div>
-
-        <div class="col-lg-4">
-          <div class="post-box">
-            <div class="post-img"><img src="{{ asset('front/assets/img/blog/blog-3.jpg') }}" class="img-fluid" alt=""></div>
-            <span class="post-date">Mon, July 11</span>
-            <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div> --}}
-
       </div>
 
     </div>
@@ -1135,6 +1123,5 @@
 
   </section>
   <!-- End Contact Section -->
-
-</main>
+{{-- </main> --}}
 @endsection

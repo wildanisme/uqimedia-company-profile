@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/blog/{id}', [HomeController::class, 'showPost'])->name('blogPost.show');
 Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboard.index');
 
