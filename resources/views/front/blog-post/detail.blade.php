@@ -30,13 +30,13 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="blog-single.html">{{ $blogPost->title }}</a>
+              <a href="{{ $blogPost->slug }}">{{ $blogPost->title }}</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">{{ $blogPost->user->name }}</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#">{{ $blogPost->created_at->format('d, M Y') }}</a></li>
                 <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
               </ul>
             </div>

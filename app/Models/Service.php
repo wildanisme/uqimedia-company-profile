@@ -5,15 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BlogCategory extends Model
+class Service extends Model
 {
     use HasFactory;
-
-    protected $table = 'blog_categories';
+    protected $table = 'services';
     protected $guarded = ['id'];
-
-    public function posts()
-    {
-        return $this->hasMany(BlogPost::class, 'category_id');
-    }
 }

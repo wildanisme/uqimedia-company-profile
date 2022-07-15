@@ -4,20 +4,23 @@ namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $latestBlogPosts = BlogPost::with(['category'])->latest()->limit(6)->get();
-        return view('front.home.home', compact('latestBlogPosts'));
+        $latestBlogPosts = BlogPost::with(['category', 'user'])->latest()->limit(6)->get();
+        $services = Service::all();
+
+        return view('front.home.home', compact('latestBlogPosts', 'services'));
     }
 
-    public function showPost($id)
+    public function showPost($slug)
     {
-        $blogPost = BlogPost::with(['category'])->find($id);
-        // dd($blogPost);
+        $blogPost = BlogPost::with(['category', 'user'])->where('slug', $slug)->first();
+
         return view('front.blog-post.detail', compact('blogPost'));
     }
 
